@@ -71,9 +71,4 @@ public class Person {
         }
 
     }
-
-    public static void main(String[] args) throws Exception{
-        Person list = new Person();
-        list.showPersons("D:\\testFile.txt");
-    }
 }

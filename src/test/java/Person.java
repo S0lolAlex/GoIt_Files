@@ -8,7 +8,7 @@ public class Person {
         isTrueFormat(fileName);
         ArrayList<String> list = inputData(fileName);
         for (String s : list) {
-            if (s.matches("^(\\d{3}-\\d{3}-\\d{4})$||^(\\(\\d{3}\\) \\d{3}-\\d{4})$")) {
+            if (s.matches("^(\\d{3}-\\d{3}-\\d{4})$") || s.matches("^(\\(\\d{3}\\) \\d{3}-\\d{4})$")) {
                 System.out.println(s);
             }
         }

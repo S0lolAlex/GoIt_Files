@@ -4,11 +4,12 @@ import java.io.*;
 import java.util.*;
 
 public class Person {
+    private static final String REGEX = "\\(?\\d{3}\\)?[\\-\\s]?\\d{3}-\\d{4}";
     public void showNumber(String fileName) throws IOException {
         isTrueFormat(fileName);
         ArrayList<String> list = inputData(fileName);
         for (String s : list) {
-            if (s.matches("^(\\d{3}-\\d{3}-\\d{4})$") || s.matches("^(\\(\\d{3}\\) \\d{3}-\\d{4})$")) {
+            if (s.matches(REGEX)) {
                 System.out.println(s);
             }
         }
